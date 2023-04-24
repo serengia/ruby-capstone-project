@@ -9,8 +9,4 @@ class Book
     @publisher = publisher
     @cover_state = cover_state
   end
-
-  def can_be_archived?
-    
-  end
 end
