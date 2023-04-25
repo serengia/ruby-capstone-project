@@ -1,3 +1,4 @@
+require_relative 'spec_helper'
 require_relative '../book/book'
 require_relative '../book/label'
 
