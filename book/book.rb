@@ -15,7 +15,7 @@ class Book < Item
     super || @cover_state == 'bad'
   end
 
-   def to_s
+  def to_s
     "(#{@id}) publisher: #{@publisher} - cover state: #{@cover_state} - publish date: #{@publish_date.to_date}"
   end
 
