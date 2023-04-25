@@ -1,5 +1,3 @@
-require_relative '../item'
-
 class Book < Item
   attr_reader :id
   attr_accessor :publisher, :cover_state
@@ -14,10 +12,5 @@ class Book < Item
   def can_be_archived?
     super || @cover_state == 'bad'
   end
-
-  def to_s
-    "(#{@id}) publisher: #{@publisher} - cover state: #{@cover_state} - publish date: #{@publish_date.to_date}"
-  end
-
   private :can_be_archived?
 end

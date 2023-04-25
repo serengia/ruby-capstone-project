@@ -1,5 +1,4 @@
-require_relative 'spec_helper'
-require_relative '../book/label'
+require_relative '../books/label'
 require_relative '../item'
 
 describe Label do
@@ -13,6 +12,9 @@ describe Label do
 
   it 'has a color' do
     expect(label.color).to eq('red')
+  end
+   it 'takes two parameters and return a label object' do
+    expect(@label).to be_an_instance_of(Label)
   end
 
   it 'should return true if the label has an item' do

@@ -1,6 +1,5 @@
-require_relative 'spec_helper'
-require_relative '../book/book'
-require_relative '../book/label'
+require_relative '../books/book'
+require_relative '../books/label'
 
 describe Book do
   before :each do
