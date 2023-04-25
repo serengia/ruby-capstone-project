@@ -1,11 +1,26 @@
-# require_relative '../game/game'
-# describe Game do
-# describe '#can_be_archived?'do
-#     context 'when published over 10 years ago and last played 2 years ' do
-#         game = Game.new(multiplayer: true, last_played_at: Time.new(2023, 1, 1), publish_date: Time.new(2008, 1, 1) )
-#         it 'should return true' do
-#             expect(game.can_be_archived?).to be_truthy
-#         end
-#     end
-#  end
-# end
+require_relative '../game/game'
+describe Game do
+describe '#can_be_archived?'do
+    context 'when published over 10 years ago and last played over 2 years ' do
+        game = Game.new(true, Time.new(2020, 1, 1), Time.new(2005, 1, 1))
+        it 'should return true' do
+            expect(game.can_be_archived?).to be_truthy
+        end
+    end
+
+    context 'when published over 10 years ago and last played less than 2 years ' do
+        game = Game.new(true, Time.now, Time.new(2005, 1, 1))
+        it 'should return true' do
+            expect(game.can_be_archived?).to be_falsey
+        end
+    end
+
+    context 'when published less than 10 years ago and last played over 2 years ' do
+        game = Game.new(true, Time.new(2020, 1, 1), Time.now)
+        it 'should return true' do
+            expect(game.can_be_archived?).to be_falsey
+        end
+    end
+
+ end
+end
