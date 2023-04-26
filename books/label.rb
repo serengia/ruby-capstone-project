@@ -1,4 +1,4 @@
-class Label  
+class Label
   attr_reader :title, :color, :items, :label
 
   def initialize(title, color)

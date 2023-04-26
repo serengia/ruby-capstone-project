@@ -13,7 +13,7 @@ describe Label do
   it 'has a color' do
     expect(@label.color).to eq('red')
   end
-   it 'takes two parameters and return a label object' do
+  it 'takes two parameters and return a label object' do
     expect(@label).to be_an_instance_of(Label)
   end
 

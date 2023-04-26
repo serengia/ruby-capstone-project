@@ -11,7 +11,7 @@ def main
     puts '0 - Exit'
     option = gets.chomp.to_i
 
-    if option == 0
+    if option.zero?
       puts 'Thanks for using this app!'
       break
     end

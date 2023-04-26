@@ -18,12 +18,12 @@ describe Book do
     expect(@book.publish_date).to eq('2010-01-01')
   end
 
-  # it 'should return true if book is damaged' do   
+  # it 'should return true if book is damaged' do
   #   @book.move_to_archive
   #   expect(@book.send(:can_be_archived?)).to be true
   # end
 
-  # it 'should return true if book is older than 10 years' do  
+  # it 'should return true if book is older than 10 years' do
   #   @book.move_to_archive
   #   expect(@book.send(:can_be_archived?)).to be true
   # end

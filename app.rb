@@ -1,13 +1,13 @@
 require 'date'
+require_relative 'preserve'
 require_relative './game/game'
 require_relative './game/author'
-require_relative 'preserve'
 
 class App
   def initialize
     @preserve = Preserve.new
-    @preserve.load_games
     @preserve.load_authors
+    @preserve.load_games
   end
 
   def games_list
@@ -34,14 +34,16 @@ class App
     last_played_at = Date.parse(gets.chomp)
     puts 'Enter the publish date in format (YYYY-MM-DD)'
     publish_date = Date.parse(gets.chomp)
-    game = Game.new(nil, publish_date, multiplayer, last_played_at)
+    new_game = Game.new(nil, publish_date, multiplayer, last_played_at)
     puts "Enter author details\n"
-    author = add_author
-    game.add_author(author)
-    @preserve.games.push(game)
-    @preserve.save_game(game)
+    new_author = add_author
+    new_game.add_author(new_author)
+    @preserve.games.push(new_game)
+    @preserve.save_game(new_game)
     puts 'Game created successfully'
   end
+
+  private
 
   def add_author
     puts 'Enter first name'
