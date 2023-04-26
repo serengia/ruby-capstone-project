@@ -1,14 +1,13 @@
-class MusicAlbum
-  attr_accessor :first_name, :last_name
+class MusicAlbum < Item
+  attr_accessor :on_spotify
 
-  def initialize(first_name, last_name)
-    @id = ""
-    @first_name = first_name
-    @last_name = last_name
-    @items = []
+  def initialize(on_spotify)
+    @on_spotify = on_spotify
   end
 
-  def add_items(item)
-    @items.push(item)
+  private
+
+  def can_be_archived?
+    super && @on_spotify
   end
 end
