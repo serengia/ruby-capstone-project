@@ -18,7 +18,7 @@ describe Label do
   end
 
   it 'should return true if the label has an item' do
-    @item = Item.new('2002-01-01')
+    @item = Item.new(nil, '2002-01-01')
     @item.add_label(@label)
     expect(@label.items.length).to eq 1
   end

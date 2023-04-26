@@ -3,7 +3,7 @@ require_relative '../books/label'
 
 describe Book do
   before :each do
-    @book = Book.new('2010-01-01', 'publisher', true)
+    @book = Book.new(nil, '2010-01-01', 'publisher', true)
   end
 
   it 'has a publisher' do
