@@ -1,17 +1,18 @@
-require "../item"
+require_relative '../item'
 
 class Genre < Item
-  attr_reader :items, :id
   attr_accessor :name
+  attr_reader :items, :id
 
   def initialize(name)
+    super
     @id = Random.rand(1..1000) + Random.rand(1..1000)
     @items = []
     @name = name
   end
 
-  def add_item(itemInstance)
-    @items.push(itemInstance)
-    itemInstance.add_genre(self)
+  def add_item(item)
+    @items.push(item)
+    item.add_genre(self)
   end
 end
