@@ -51,9 +51,7 @@ class App
     puts "Game created successfully"
   end
 
-  private
-
-  def add_author
+   def add_author
     puts "Enter first name"
     first_name = gets.chomp
     puts "Enter last name"
