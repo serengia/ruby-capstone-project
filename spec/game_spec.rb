@@ -9,7 +9,7 @@ describe Game do
     end
 
     context 'when published over 10 years ago and last played less than 2 years ' do
-      game = Game.new(nil, Time.new(2005, 1, 1),true, Time.now)
+      game = Game.new(nil, Time.new(2005, 1, 1), true, Time.now)
       it 'should return true' do
         expect(game.can_be_archived?).to be_falsey
       end
