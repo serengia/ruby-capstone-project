@@ -1,7 +1,8 @@
 require_relative 'start_app'
+
 def main
   start = StartApp.new
-  puts 'Welcome to Catalog of things'
+  puts 'Catalog of my things'
 
   loop do
     puts 'Please choose an option by entering a number:'
@@ -15,14 +16,14 @@ def main
     puts '8 - Add a game'
     puts '9 - Add a music album'
     puts '0 - Exit'
-    option = gets.chomp.to_i
+    choice = gets.chomp.to_i
 
-    if option.zero?
+    if choice == 0
       puts 'Thanks for using this app!'
       break
     end
 
-    start.start_app(option)
+    start.start_app(choice)
   end
 end
 
