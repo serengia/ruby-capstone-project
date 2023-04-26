@@ -10,7 +10,8 @@ class Genre < Item
     @name = name
   end
 
-  def add_item(item)
-    @items.push(item)
+  def add_item(itemInstance)
+    @items.push(itemInstance)
+    itemInstance.add_genre(self)
   end
 end
