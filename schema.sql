@@ -50,3 +50,14 @@ CREATE TABLE IF NOT EXISTS Book (
   Genre_id INT NOT NULL,
   archived_id INT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS music_album (
+  id SERIAL PRIMARY KEY,
+  on_spotify BOOLEAN NOT NULL,
+  publish_date DATE NULL,
+  Label_id INT NOT NULL,
+  Author_id INT NOT NULL,
+  Genre_id INT NOT NULL,
+  Source_id INT NOT NULL,
+  archived_id INT NOT NULL
+);
