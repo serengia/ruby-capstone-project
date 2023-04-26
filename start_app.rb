@@ -18,7 +18,7 @@ class StartApp
     when 1
       @app.games_list
     when 2
-      @app.list_authors
+      @app.authors_list
     else
       puts 'Kindly enter valid input'
     end

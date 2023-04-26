@@ -8,7 +8,14 @@ def main
     puts '1 - List of all games'
     puts '2 - List of Authors'
     puts '3 - add-game'
+    puts '0 - Exit'
     option = gets.chomp.to_i
+
+    if option == 0
+      puts 'Thanks for using this app!'
+      break
+    end
+
     start.start_app(option)
   end
 end
