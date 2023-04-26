@@ -2,7 +2,7 @@ require_relative '../music/music_album'
 
 describe 'MusicAlbum' do
   before :each do
-    @album1 = MusicAlbum.new(true)
+    @album1 = MusicAlbum.new(nil, '2022-04-04', true)
   end
 
   describe 'class' do
