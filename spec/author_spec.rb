@@ -3,7 +3,7 @@ require_relative '../item'
 
 describe Author do
   before :each do
-    @author = Author.new('First name', 'Last name')
+    @author = Author.new(nil, 'First name', 'Last name')
   end
   it 'should return first name' do
     expect(@author.first_name).to eq 'First name'
@@ -14,7 +14,7 @@ describe Author do
   end
 
   it 'should add item' do
-    item = Item.new(Time.now)
+    item = Item.new(nil, Time.now)
     @author.add_item(item)
     expect(@author.items.length).to eq 1
   end
