@@ -2,12 +2,16 @@ require 'date'
 require_relative 'preserve'
 require_relative './game/game'
 require_relative './game/author'
+require_relative './books/book'
+require_relative './books/label'
 
 class App
   def initialize
     @preserve = Preserve.new
     @preserve.load_authors
     @preserve.load_games
+    @preserve.load_books
+    @preserve.load_labels
   end
 
   def games_list
@@ -54,5 +58,49 @@ class App
     @preserve.authors.push(new_author)
     @preserve.save_author(new_author)
     new_author
+  end
+
+  # Books
+  def books_list
+    return puts 'No books found' if @preserve.books.empty?
+
+    @preserve.books.each_with_index do |book, index|
+      puts "#{index + 1}) Publisher: #{book.publisher}, Cover state: #{book.cover_state}"
+    end
+  end
+
+  def labels_list
+    return puts 'No labels found' if @preserve.labels.empty?
+
+    @preserve.labels.each_with_index do |label, index|
+      puts "#{index + 1}) Title: #{label.title}, Color: #{label.color}"
+    end
+  end
+
+    def add_label
+    puts 'Enter title'
+    title = gets.chomp
+    puts 'Enter color'
+    color = gets.chomp
+    new_label = Label.new(nil, title, color)
+    @preserve.labels.push(new_label)
+    @preserve.save_label(new_label)
+    new_label
+  end
+
+  def add_book
+    puts 'Is it publisher [Y / N]'
+    publisher = gets.chomp.downcase == 'y'
+    puts 'Enter cover state '
+    cover_state = gets.chomp
+    puts 'Enter the publish date in format (YYYY-MM-DD)'
+    publish_date = Date.parse(gets.chomp)
+    new_book = Book.new(nil, publish_date, publisher, cover_state)
+    puts "Enter label details\n"
+    new_label = add_label
+    new_book.add_label(new_label)
+    @preserve.books.push(new_book)
+    @preserve.save_book(new_book)
+    puts 'Book created successfully'
   end
 end

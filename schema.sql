@@ -38,3 +38,15 @@ CREATE TABLE IF NOT EXISTS Game (
   Label_id INT NOT NULL,
   archived_id INT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS Book (
+  id SERIAL PRIMARY KEY,
+  publisher VARCHAR(55) NOT NULL,
+  cover_state VARCHAR(55) NULL,
+  published_date DATE NULL,
+  Author_id INT NOT NULL,
+  Label_id INT NOT NULL,
+  Source_id INT NOT NULL,
+  Genre_id INT NOT NULL,
+  archived_id INT NOT NULL
+);
