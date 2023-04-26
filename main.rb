@@ -1,7 +1,7 @@
 require_relative 'start_app'
 def main
   start = StartApp.new
-  puts 'Welcom to Catalog of things'
+  puts 'Welcome to Catalog of things'
 
   loop do
     puts 'Please choose an option by entering a number:'
