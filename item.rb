@@ -2,7 +2,7 @@ class Item
   attr_reader :id, :archived
   attr_accessor :genre, :author, :source, :label, :publish_date
 
-  def initialize(genre, source, label, publish_date)
+  def initialize(publish_date)
     @id = Random.rand(1..1000)
     @genre = genre
     @source = source
@@ -12,7 +12,7 @@ class Item
 
   def can_be_archived?
     # calculate the age of the item in years
-    age_in_years = (Time.now.year - @publish_date.year)
+    age_in_years = (Time.now - @publish_date)
 
     return true if age_in_years >= 10
 
