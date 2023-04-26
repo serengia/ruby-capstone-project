@@ -3,7 +3,7 @@ require_relative '../item'
 
 describe Label do
   before :each do
-    @label = Label.new('label', 'red')
+    @label = Label.new(nil, 'label', 'red')
   end
 
   it 'has a title' do
