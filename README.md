@@ -1,22 +1,20 @@
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Ruby Capstone ](#-ruby-capstone-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
-# 📖 OOP School Library <a name="about-project"></a>
+# 📖 Ruby Capstone <a name="about-project"></a>
 
 School library OOP implementation. Using Ruby language.
 
@@ -42,16 +40,16 @@ In order to run this project you need:
 
 ### Setup
 
-- Clone this repo <https://github.com/serengia/oop-school-library--ruby>
+- Clone this repo <git@github.com:serengia/ruby-capstone-project.git>
 
   ```bash
-  git clone https://github.com/serengia/oop-school-library--ruby.git
+  git clone git@github.com:serengia/ruby-capstone-project.git
   ```
 
-- Navigate to oop-school-library folder/directory
+- Navigate to ruby-capstone-project folder/directory
 
   ```bash
-  cd oop-school-library
+  cd ruby-capstone-project
   ```
 
 - On the command line, at the project's root, run `bundle install` to install app dependencies
@@ -68,6 +66,18 @@ In order to run this project you need:
 - Twitter: [@jamesserengia](https://twitter.com/jamesserengia)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/james-serengia)
 
+👤 **Rachel Isaac**
+
+- GitHub: [@rachelwebdev](https://github.com/Rachelwebdev)
+- Twitter:[@rachelisaac13](https://twitter.com/Rachelisaac13)
+- LinkedIn: [Rachel Isaac](https://www.linkedin.com/in/rachelisaac13/)
+
+👤 **Ghulam Subbhani(Malik)**
+
+- GitHub: [@githubhandle](https://github.com/gsmalik030)
+- Twitter: [@twitterhandle](https://twitter.com/gsmalik030)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ghulam-subbhani-4b1281252/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
@@ -80,7 +90,7 @@ In order to run this project you need:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/huzaifakhan0308/morse-code-massage/issues).
+Feel free to check the [issues page](https://github.com/serengia/ruby-capstone-project/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
