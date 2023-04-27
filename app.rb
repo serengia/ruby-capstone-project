@@ -1,11 +1,11 @@
-require "date"
-require_relative "preserve"
-require_relative "./game/game"
-require_relative "./game/author"
-require_relative "./books/book"
-require_relative "./books/label"
-require_relative "./music/genre"
-require_relative "./music/music_album"
+require 'date'
+require_relative 'preserve'
+require_relative './game/game'
+require_relative './game/author'
+require_relative './books/book'
+require_relative './books/label'
+require_relative './music/genre'
+require_relative './music/music_album'
 
 class App
   def initialize
